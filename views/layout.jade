@@ -4,9 +4,11 @@ html
     if locals.title
       title= title
     else
-      title New Sails App
+      title ACM NYIT Old Westbury
 
     // Viewport mobile tag for sensible mobile support
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE-edge,chrome=1")
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
 
     //-
@@ -31,11 +33,37 @@ html
 
     // STYLES
     link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/layout.css")
+    link(rel="stylesheet", href="/styles/materialize.css")
     // STYLES END
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 
     block styles
 
   body
+    //Navigation header
+    html
+  head
+  body
+    .navbar-fixed
+      nav
+        .nav-wrapper.light-blue.darken-2.nav-padding
+          a.brand-logo(href='/')
+            i.material-icons cloud
+            | ACM NYIT Old Westbury
+          ul.right.hide-on-med-and-down
+            li
+              a(href='/schedule')
+                i.material-icons more_vert
+            li
+              a(href='/profile')
+                i.material-icons search
+            li
+              a(href='/login')
+                i.material-icons view_module
+            li
+              a(href='/settings')
+                i.material-icons refresh
     block body
 
     //-
@@ -84,5 +112,6 @@ html
 
     // SCRIPTS
     script(src="/js/dependencies/sails.io.js")
+    script(src="/js/dependencies/jquery.min.js")
+    script(src="/js/dependencies/materialize.min.js")
     // SCRIPTS END
-
